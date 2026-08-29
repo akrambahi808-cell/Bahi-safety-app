@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>Bahi Safety Supplies</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="الرئيسية">
+    <img src="assets/logo.png" alt="Bahi Safety Supplies" onerror="this.style.display='none'">
+    <span>BAHI <b>SAFETY</b></span>
+  </a>
+  <div class="actions">
+    <button id="searchBtn" aria-label="بحث">⌕</button>
+    <button id="cartBtn" aria-label="السلة">🛒<i id="cartCount">0</i></button>
+    <button id="menuBtn" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<aside id="drawer" class="drawer">
+  <div class="drawer-head"><strong>القائمة</strong><button id="closeMenu">×</button></div>
+  <a href="#home">الرئيسية</a>
+  <a href="#categories">الأقسام</a>
+  <a href="#products">كل المنتجات</a>
+  <a href="#about">عن Bahi Safety</a>
+</aside>
+<div id="backdrop" class="backdrop"></div>
+
+<main>
+<section id="home" class="view active">
+  <section class="hero">
+    <img src="assets/hero-mobile.png" alt="عمال يرتدون معدات السلامة" onerror="this.style.display='none'">
+    <div class="hero-overlay"></div>
+    <div class="hero-copy">
+      <span class="eyebrow">BAHI SAFETY SUPPLIES</span>
+      <h1>حمايتك تبدأ من هنا</h1>
+      <p>حلول ومستلزمات السلامة المهنية للأعمال والمشاريع.</p>
+      <div><a class="btn primary" href="#categories">استكشف الأقسام</a><a class="btn ghost" href="#products">كل المنتجات</a></div>
+    </div>
+  </section>
+
+  <!-- Categories are intentionally visible immediately; no "shop by category" click required. -->
+  <section class="section" id="homeCategories">
+    <div class="section-title"><h2>الأقسام الرئيسية</h2><a href="#categories">عرض الكل</a></div>
+    <div id="homeCatGrid" class="cat-grid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title"><h2>منتجات مختارة</h2><a href="#products">عرض الكل</a></div>
+    <div id="featuredGrid" class="product-grid"></div>
+  </section>
+</section>
+
+<section id="categories" class="view">
+  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>الأقسام</h2></div>
+  <div id="allCatGrid" class="cat-grid"></div>
+</section>
+
+<section id="products" class="view">
+  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>كل المنتجات</h2></div>
+  <div class="toolbar"><input id="searchInput" placeholder="ابحث عن منتج..." autocomplete="off"><select id="sortSelect"><option value="date">الأحدث</option><option value="price">السعر: الأقل</option><option value="-price">السعر: الأعلى</option><option value="title">الاسم</option></select></div>
+  <div id="productGrid" class="product-grid"></div>
+  <button id="loadMore" class="load-more">تحميل المزيد</button>
+</section>
+
+<section id="category" class="view">
+  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2 id="catTitle">القسم</h2></div>
+  <div id="categoryGrid" class="product-grid"></div>
+</section>
+
+<section id="product" class="view">
+  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>تفاصيل المنتج</h2></div>
+  <div id="productDetail"></div>
+</section>
+
+<section id="about" class="view">
+  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>عن Bahi Safety</h2></div>
+  <div class="about-card"><h3>BAHI SAFETY SUPPLIES</h3><p>مستلزمات السلامة المهنية والوقاية للأعمال والمشاريع.</p><a class="btn primary" href="https://wa.me/967773133380" target="_blank" rel="noopener">تواصل عبر واتساب</a></div>
+</section>
+</main>
+
+<div id="searchModal" class="modal"><div class="modal-card"><button id="closeSearch">×</button><h3>بحث سريع</h3><input id="modalSearch" placeholder="اكتب اسم المنتج..."><div id="searchResults"></div></div></div>
+<div id="lightbox" class="lightbox"><button id="closeLightbox">×</button><img id="lightboxImg" alt=""></div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
