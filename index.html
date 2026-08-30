@@ -33,7 +33,7 @@
 <main>
 <section id="home" class="view active">
   <section class="hero">
-    <img src="assets/hero-mobile.png" alt="عمال يرتدون معدات السلامة" onerror="this.style.display='none'">
+    <img class="hero-image" src="assets/hero-workers.webp" alt="عمال يرتدون معدات السلامة" width="1600" height="900" fetchpriority="high">
     <div class="hero-overlay"></div>
     <div class="hero-copy">
       <span class="eyebrow">BAHI SAFETY SUPPLIES</span>
@@ -81,10 +81,15 @@
   <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>عن Bahi Safety</h2></div>
   <div class="about-card"><h3>BAHI SAFETY SUPPLIES</h3><p>مستلزمات السلامة المهنية والوقاية للأعمال والمشاريع.</p><a class="btn primary" href="https://wa.me/967773133380" target="_blank" rel="noopener">تواصل عبر واتساب</a></div>
 </section>
+
+<section class="safety-scenes" aria-label="مجالات العمل والسلامة">
+  <div class="scene-card"><img src="assets/scene-construction.webp" alt="عمال في مواقع الإنشاءات" loading="lazy" width="1200" height="675"><div><strong>سلامة مواقع الإنشاءات</strong><span>معدات حماية احترافية للعمال والمشاريع</span></div></div>
+  <div class="scene-card"><img src="assets/scene-road.webp" alt="السلامة في الطرقات والمشاريع" loading="lazy" width="1200" height="380"><div><strong>السلامة في الطرقات</strong><span>حلول ومستلزمات السلامة للمواقع والطرق</span></div></div>
+</section>
 </main>
 
 <div id="searchModal" class="modal"><div class="modal-card"><button id="closeSearch">×</button><h3>بحث سريع</h3><input id="modalSearch" placeholder="اكتب اسم المنتج..."><div id="searchResults"></div></div></div>
-<div id="lightbox" class="lightbox"><button id="closeLightbox">×</button><img id="lightboxImg" alt=""></div>
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="معاينة الصورة"><button id="closeLightbox" aria-label="إغلاق الصورة">×</button><button id="backFromLightbox" class="lightbox-back" aria-label="العودة إلى المنتج">← العودة للمنتج</button><img id="lightboxImg" alt=""></div>
 <div id="toast" class="toast"></div>
 <script src="app.js"></script>
 </body>
