@@ -1,4 +1,4 @@
-const API='/wp-json/wc/store/v1';
+const API='https://bahisafety.com/wp-json/wc/store/v1';
 const WA='967773133380';
 const state={cats:[],products:[],page:1,loading:false,done:false,query:'',sort:'date',history:[],cart:JSON.parse(localStorage.getItem('bahi_cart')||'[]')};
 
