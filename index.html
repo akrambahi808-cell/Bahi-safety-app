@@ -1,96 +1,18 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#111111">
-<title>Bahi Safety Supplies</title>
-<link rel="icon" href="assets/logo-cropped.png">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="topbar">
-  <a class="brand" href="#home" aria-label="الرئيسية">
-    <img src="assets/logo-cropped.png" alt="Bahi Safety Supplies" onerror="this.style.display='none'">
-    <span>BAHI <b>SAFETY</b></span>
-  </a>
-  <div class="actions">
-    <button id="searchBtn" aria-label="بحث">⌕</button>
-    <button id="cartBtn" aria-label="السلة">🛒<i id="cartCount">0</i></button>
-    <button id="menuBtn" aria-label="القائمة">☰</button>
-  </div>
-</header>
-
-<aside id="drawer" class="drawer">
-  <div class="drawer-head"><strong>القائمة</strong><button id="closeMenu">×</button></div>
-  <a href="#home">الرئيسية</a>
-  <a href="#categories">الأقسام</a>
-  <a href="#products">كل المنتجات</a>
-  <a href="#about">عن Bahi Safety</a>
-</aside>
-<div id="backdrop" class="backdrop"></div>
-
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101010"><meta name="description" content="Bahi Safety Supplies"><link rel="icon" href="assets/logo.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><title>Bahi Safety Supplies</title></head><body>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="#home"><img src="assets/logo.png" alt="Bahi Safety Supplies"><span>BAHI <b>SAFETY</b></span></a><div class="actions"><button id="searchBtn" class="icon-btn" aria-label="بحث">⌕</button><button id="cartBtn" class="icon-btn" aria-label="السلة">🛒<i id="cartCount">0</i></button><button id="menuBtn" class="icon-btn" aria-label="القائمة">☰</button></div></div></header>
+<aside id="drawer" class="drawer"><div class="drawer-head"><b>القائمة الرئيسية</b><button id="closeMenu" class="icon-btn">×</button></div><a href="#home">الرئيسية</a><a href="#categories">الأقسام</a><a href="#products">كل المنتجات</a><a href="#about">عن Bahi Safety</a><a href="https://bahisafety.com/shop/" target="_blank" rel="noopener">الموقع الإلكتروني</a></aside><div id="backdrop" class="backdrop"></div>
 <main>
-<section id="home" class="view active">
-  <section class="hero">
-    <img class="hero-image" src="assets/hero-workers.webp" alt="عمال يرتدون معدات السلامة" width="1600" height="900" fetchpriority="high">
-    <div class="hero-overlay"></div>
-    <div class="hero-copy">
-      <span class="eyebrow">BAHI SAFETY SUPPLIES</span>
-      <h1>حمايتك تبدأ من هنا</h1>
-      <p>حلول ومستلزمات السلامة المهنية للأعمال والمشاريع.</p>
-      <div><a class="btn primary" href="#categories">استكشف الأقسام</a><a class="btn ghost" href="#products">كل المنتجات</a></div>
-    </div>
-  </section>
-
-  <!-- Categories are intentionally visible immediately; no "shop by category" click required. -->
-  <section class="section" id="homeCategories">
-    <div class="section-title"><h2>الأقسام الرئيسية</h2><a href="#categories">عرض الكل</a></div>
-    <div id="homeCatGrid" class="cat-grid"></div>
-  </section>
-
-  <section class="section">
-    <div class="section-title"><h2>منتجات مختارة</h2><a href="#products">عرض الكل</a></div>
-    <div id="featuredGrid" class="product-grid"></div>
-  </section>
-</section>
-
-<section id="categories" class="view">
-  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>الأقسام</h2></div>
-  <div id="allCatGrid" class="cat-grid"></div>
-</section>
-
-<section id="products" class="view">
-  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>كل المنتجات</h2></div>
-  <div class="toolbar"><input id="searchInput" placeholder="ابحث عن منتج..." autocomplete="off"><select id="sortSelect"><option value="date">الأحدث</option><option value="price">السعر: الأقل</option><option value="-price">السعر: الأعلى</option><option value="title">الاسم</option></select></div>
-  <div id="productGrid" class="product-grid"></div>
-  <button id="loadMore" class="load-more">تحميل المزيد</button>
-</section>
-
-<section id="category" class="view">
-  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2 id="catTitle">القسم</h2></div>
-  <div id="categoryGrid" class="product-grid"></div>
-</section>
-
-<section id="product" class="view">
-  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>تفاصيل المنتج</h2></div>
-  <div id="productDetail"></div>
-</section>
-
-<section id="about" class="view">
-  <div class="page-head"><button class="backBtn" data-back>← السابق</button><h2>عن Bahi Safety</h2></div>
-  <div class="about-card"><h3>BAHI SAFETY SUPPLIES</h3><p>مستلزمات السلامة المهنية والوقاية للأعمال والمشاريع.</p><a class="btn primary" href="https://wa.me/967773133380" target="_blank" rel="noopener">تواصل عبر واتساب</a></div>
-</section>
-
-<section class="safety-scenes" aria-label="مجالات العمل والسلامة">
-  <div class="scene-card"><img src="assets/scene-construction.webp" alt="عمال في مواقع الإنشاءات" loading="lazy" width="1200" height="675"><div><strong>سلامة مواقع الإنشاءات</strong><span>معدات حماية احترافية للعمال والمشاريع</span></div></div>
-  <div class="scene-card"><img src="assets/scene-road.webp" alt="السلامة في الطرقات والمشاريع" loading="lazy" width="1200" height="380"><div><strong>السلامة في الطرقات</strong><span>حلول ومستلزمات السلامة للمواقع والطرق</span></div></div>
-</section>
+<section id="home" class="view active"><section class="hero"><img src="assets/hero-workers.webp" class="hero-image" alt="عمال يرتدون معدات السلامة" fetchpriority="high"><div class="hero-overlay"></div><div class="hero-copy"><span class="eyebrow">BAHI SAFETY SUPPLIES</span><h1>حمايتك <span>تبدأ</span> من هنا</h1><p>مستلزمات السلامة المهنية للإنشاءات والمصانع والورش والطرقات والمشاريع.</p><div class="hero-actions"><a class="btn primary" href="#categories">تصفح الأقسام</a><a class="btn ghost" href="#products">جميع المنتجات</a></div></div></section>
+<section class="section"><div class="section-head"><h2>الأقسام الرئيسية</h2><a href="#categories">عرض الكل ←</a></div><div id="homeCats" class="cat-grid"><div class="loading">جاري تحميل الأقسام...</div></div></section>
+<section class="section"><div class="section-head"><h2>منتجات مميزة</h2><a href="#products">عرض الكل ←</a></div><div id="featuredGrid" class="product-grid"><div class="loading">جاري تحميل المنتجات...</div></div></section>
+<section class="safety-scenes"><div class="scene-card"><img src="assets/scene-construction.webp" alt="عمال في مواقع الإنشاءات" loading="lazy"><div><strong>سلامة مواقع الإنشاءات</strong><span>معدات حماية احترافية للعمال والمشاريع</span></div></div><div class="scene-card"><img src="assets/scene-road.webp" alt="السلامة في الطرقات" loading="lazy"><div><strong>السلامة في الطرقات</strong><span>حلول ومستلزمات السلامة للمواقع والطرق</span></div></div></section></section>
+<section id="categories" class="view"><div class="page-head"><button class="back-btn" data-back>← السابق</button><h2>الأقسام</h2></div><section class="section"><div id="allCats" class="cat-grid"></div></section></section>
+<section id="products" class="view"><div class="page-head"><button class="back-btn" data-back>← السابق</button><h2>كل المنتجات</h2></div><section class="section"><div class="toolbar"><input id="searchInput" placeholder="ابحث عن منتج..." autocomplete="off"><select id="sortSelect"><option value="date">الأحدث</option><option value="title">الاسم</option><option value="price">السعر: الأقل</option><option value="-price">السعر: الأعلى</option></select></div><div id="productGrid" class="product-grid"></div><button id="loadMore" class="load-more">تحميل المزيد</button></section></section>
+<section id="category" class="view"><div class="page-head"><button class="back-btn" data-back>← السابق</button><h2 id="catTitle">القسم</h2></div><section class="section"><div id="categoryGrid" class="product-grid"></div></section></section>
+<section id="product" class="view"><div class="page-head"><button class="back-btn" data-back>← السابق</button><h2>تفاصيل المنتج</h2></div><section class="section"><div id="productDetail"></div></section></section>
+<section id="about" class="view"><div class="page-head"><button class="back-btn" data-back>← السابق</button><h2>عن Bahi Safety</h2></div><section class="section"><div class="about-card"><img src="assets/logo.png" alt="Bahi Safety"><h3>BAHI SAFETY SUPPLIES</h3><p>مستلزمات السلامة المهنية ووسائل الوقاية للأعمال والمشاريع.</p><a class="btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/967773133380?text=السلام%20عليكم%20اريد%20الاستفسار%20عن%20مستلزمات%20السلامة">تواصل عبر واتساب</a></div></section></section>
 </main>
-
-<div id="searchModal" class="modal"><div class="modal-card"><button id="closeSearch">×</button><h3>بحث سريع</h3><input id="modalSearch" placeholder="اكتب اسم المنتج..."><div id="searchResults"></div></div></div>
-<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="معاينة الصورة"><button id="closeLightbox" aria-label="إغلاق الصورة">×</button><button id="backFromLightbox" class="lightbox-back" aria-label="العودة إلى المنتج">← العودة للمنتج</button><img id="lightboxImg" alt=""></div>
-<div id="toast" class="toast"></div>
-<script src="app.js"></script>
-</body>
-</html>
+<nav class="bottom-nav"><a href="#home">⌂<span>الرئيسية</span></a><a href="#categories">▦<span>الأقسام</span></a><a href="#products">▤<span>المنتجات</span></a><a href="https://wa.me/967773133380" target="_blank" rel="noopener">◉<span>واتساب</span></a></nav>
+<div id="searchModal" class="modal"><div class="modal-card"><button id="closeSearch" class="modal-close">×</button><h3>بحث سريع</h3><input id="modalSearch" placeholder="اكتب اسم المنتج..."><div id="searchResults"></div></div></div>
+<div id="lightbox" class="lightbox" aria-hidden="true"><button id="closeLightbox" class="light-close">×</button><button id="backFromLightbox" class="light-back">← العودة للمنتج</button><img id="lightboxImg" alt=""><div class="light-nav"><button id="lightPrev">‹</button><button id="lightNext">›</button></div></div>
+<div id="toast" class="toast"></div><script src="app.js"></script></body></html>
