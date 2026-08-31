@@ -1,0 +1,5 @@
+BAHI SAFETY GITHUB FINAL
+Version: FINAL-2026-08-31
+WooCommerce Store API live
+Mobile image + back navigation fixed
+Category image fallbacks enabled

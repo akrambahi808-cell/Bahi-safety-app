@@ -1,16 +1,5 @@
-# Bahi Safety — GitHub Pages Final
+# Bahi Safety GitHub Final
 
-Static Bahi Safety storefront connected to the WooCommerce Store API.
+This build is static and GitHub Pages compatible. It tries the WooCommerce Store API first. If CORS/API access is unavailable, it automatically uses `assets/catalog.json` built from the supplied WooCommerce export so the app never stays empty.
 
-WooCommerce API:
-https://bahisafety.com/wp-json/wc/store/v1
-
-Features:
-- Categories immediately below the Hero
-- WooCommerce categories and products
-- 20-product pagination
-- Product gallery and image zoom
-- Search, cart, WhatsApp
-- Back navigation
-- Responsive mobile/desktop layout
-- No PHP
+The local catalog is a fallback only; when Store API access works, current WooCommerce products are used.
